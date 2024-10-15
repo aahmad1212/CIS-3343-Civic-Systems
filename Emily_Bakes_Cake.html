@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Bakes Cake</title>
+
+    <script> 
+
+        function handleSelection() {
+                                        var typeInput = document.getElementById("typeInput").value;
+                                        console.log(typeInput);
+                                        var roundSize = document.getElementById("roundSize");
+                                        var sheetSize = document.getElementById("sheetSize");
+                                        var icingInput = document.getElementById("icingInput").value;
+                                        var fillingInput = document.getElementById("fillingInput").value;
+                                        var fillingFlavorInput = document.getElementById("fillingFlavorInput");
+                                        var icingInputColor = document.getElementById("icingColorInput");
+                                        var fillSize =  document.querySelector('#fillingInput option[value="Two Layers"]');
+                                        var icingInputColorNone =  document.querySelector('#icingColorInput option[value="None"]');
+                                        var writingInput = document.getElementById("writingInput").value;
+                                        var writingColorInput = document.getElementById("writingColorInput");
+                                        // Enable or disable the second menu based on the selection of the first menu
+                                        if (typeInput === "Sheet") {
+                                            roundSize.disabled = true;
+                                            sheetSize.disabled = false;
+                                            fillSize.disabled = false; 
+                                        }
+                                        else if (typeInput ==="Round"){
+                                            roundSize.disabled = false;
+                                            sheetSize.disabled = true;
+                                            fillSize.disabled = false; 
+                                        }
+                                        else if (typeInput ==="Cupcake"){
+                                            sheetSize.disabled = true;
+                                            roundSize.disabled = true;
+                                            fillSize.disabled = true; 
+                                        }
+                                        if(writingInput==="No") {
+                                            writingColorInput.disabled = true; 
+                                        }
+                                        else{
+                                            writingColorInput.disabled = false;
+                                        }
+                                        if(fillingInput=== "None"){
+                                            fillingFlavorInput.disabled = true;
+                                            
+                                        }
+                                        else {
+                                            fillingFlavorInput.disabled = false;
+                                        }
+                                        if(icingInput=== "None"){
+                                            icingInputColor.disabled = true;
+                                            icingInputColorNone.disabled=false;
+                                        }
+                                        else {
+                                            icingInputColor.disabled = false;
+                                            icingInputColorNone.disabled=true;
+                                        }
+                                       
+        }
+                                       
+                                    
+    </script>
+</head>
+<body>
+    <form id="myForm">
+        <label for="numberInput">Enter ORDER ID:</label>
+        <input type="number" id="numberInput" name="number" required>
+        <br>
+
+        <label for="typeInput">Select Type:</label>
+        <select id="typeInput" onchange="handleSelection()" name="size" required>
+            <option value="Round">Round</option>
+            <option value="Sheet">Sheet</option>
+            <option value="Cupcake">Cupcake</option>
+        </select>
+        <br>
+
+        <label for="roundSize">Select Round Size</label>
+        <select id="roundSize"  name="roundSize" required>
+            <option value="6-Inch">6-Inch</option>
+            <option value="8-Inch">8-Inch</option>
+            <option value="10-Inch">10-Inch</option>
+            <option value="12-Inch">12-Inch</option>
+            <option value="16-Inch">16-Inch</option>
+        </select>
+        <br>
+
+        <label for="sheetSize">Select Sheet Size</label>
+        <select id="sheetSize"  name="sheetSize" disabled required>
+            <option value="1/4-Inch">1/4-Inch</option>
+            <option value="1/2-Inch">1/2-Inch</option>
+            <option value="Full">Full</option>
+       
+        </select>
+        <br>
+
+
+        <label for="flavorInput">Select Flavor:</label>
+        <select id="flavorInput" name="flavor" required>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Almond">Almond</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Devil's Food Chocolate">Devil's Food Chocolate</option>
+            <option value="Chocolate">Chocolate</option>
+            <option value="Strawberry">Strawberry</option>
+        </select>
+        <br>
+        <label for="icingInput">Select Icing:</label>
+        <select id="icingInput" onchange="handleSelection()" name="icing" required>
+            <option value="None">none</option>
+            <option value="White Buttercream">White Buttercream</option>
+            <option value="Chocolate Buttercream">Chocolate Buttercream</option>
+            <option value="Almond Buttercream">Almond Buttercream</option>
+            <option value="White Chocolate Buttercream">White Chocolate Buttercream</option>
+            <option value="Cream Cheese">Cream Cheese</option>
+            <option value="Chocoale Ganache">Chocoale Ganache</option>
+        </select>
+        <br>
+        <label for="icingColorInput">Select Icing Color:</label>
+        <select id="icingColorInput" name="icingColor" disabled required>
+            <option value="None">none</option>
+            <option value="Red">Red</option>
+            <option value="Royal Blue">Royal Blue</option>
+            <option value="Green">Green</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Orange">Orange</option>
+            <option value="Baby Pink">Baby Pink</option>
+            <option value="Baby Blue">Baby Blue</option>
+            <option value="Pastel Green">Pastel Green</option>
+            <option value="Pastel Yellow">Pastel Yellow</option>
+            <option value="Lavender">Lavender</option>
+            <option value="Hot Pink">Hot Pink</option>
+            <option value="Sky Blue">Sky Blue</option>
+            <option value="Neon Green">Neon Green</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Orange">Orange</option>
+            <option value="Purple">Purple</option>
+            <option value="Fall Red">Fall Red</option>
+            <option value="Fall Green">Fall Green</option>
+            <option value="Fall Yellow">Fall Yellow</option>
+            <option value="Fall Orange">Fall Orange</option>
+            <option value="Brown">Brown</option>
+        </select>
+        <br>
+
+        <label for="fillingInput">Select Filling Size:</label>
+        <select id="fillingInput" onchange="handleSelection()" name="filling" required>
+            <option value="None">none</option>
+            <option value="One Layer">One Layer</option>
+            <option value="Two Layers">Two Layers</option>
+       
+        </select>
+        <br>
+
+        <label for="fillingFlavorInput">Select Filling Flavor:</label>
+        <select id="fillingFlavorInput" name="fillingFlavor" disabled required>
+            <option value="None">none</option>
+            <option value="White Buttercream">White Buttercream</option>
+            <option value="Chocoale Buttercream">Chocolate Buttercream</option>
+            <option value="Almond Buttercream">Almond Buttercream</option>
+            <option value="Cream Cheese">Cream Cheese</option>
+            <option value="Lemon Curd">Lemon Curd</option>
+            <option value="Strawberry">Strawberry</option>
+            <option value="Rum/Strawberry">Rum/Strawberry</option>
+            <option value="Rasberry">Rasberry</option>
+            <option value="Pecan Praline">Pecan Praline</option>
+            <option value="Chocolate Mousse">Chocolate Mousse</option>
+            <option value="Lemon Mousse">Lemon Mousse</option>
+            <option value="Strawberry Mousse">Strawberry Mousse</option>
+            <option value="Rasberry Mousse">Rasberry Mousse</option>
+            <option value="White Chocoalte Mousse">White Chocolate Mousse</option>
+            <option value="Mango Mousse">Mango Mousse</option>
+        </select>
+        <br>
+        <label for="writingInput">Select Writing Option:</label>
+        <select id="writingInput" onchange="handleSelection()" name="writingInput" required>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+        <br>
+
+        <label for="writingColorInput">Select Writing Color:</label>
+        <select id="writingColorInput" name="writingColorInput" disabled required>
+            <option value="None">none</option>
+            <option value="Ivory">Ivory</option>
+            <option value="Golden Yellow">Golden Yellow</option>
+            <option value="Gold">Gold</option>
+            <option value="Fuchi">Fuchsi</option>
+            <option value="Maroon">Maroon</option>
+            <option value="Burgandy">Burgandy</option>
+            <option value="Burnt Orange">Burnt Orange</option>
+            <option value="Turqouise">Turquoise</option>
+            <option value="Navy Blue">Navy Blue</option>
+            <option value="Gray/Silver">Gray/Silver</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+        </select>
+        <br>
+
+        <label for="decorationOption">Decorations:</label>
+        <select id="decorationOption" name="decorationOption" required>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+   
+
+    <script src="submit.js"></script>
+</body>
+</html>
