@@ -1,0 +1,47 @@
+<html>
+
+<body>
+    <a href="Emily_Bakes_Cake.html">Place Order</a>
+    <a href="Check_Orders.html">Check Orders</a>
+    <br>
+    
+    <button onclick="callGetFullOrder()"></button>
+    <form id="addCustomerForm">
+
+    
+    <p id="customerCountDisplay">CUSTOMER_ID: </p>
+    <br>
+    <input type="number" id="customerCount">
+    <br>
+    <label for="customerNameInput">Customer Name:</label>
+    <input type="text" id="customerNameInput" placeholder="Enter name">
+    <br>
+    <label for="emailInput">Email:</label>
+    <input type="text" id="emailInput" placeholder="example@gmail.com">
+    <br>
+    <label for="phoneNumberInput">Phone Number:</label>
+    <input type="number" id="phoneNumberInput">
+    <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+<script>
+    async function callGetFullOrder() {
+        
+        
+        var result = await getFullOrder();
+        console.log(' GETFULLORDER ' ,result.orderInput);
+        var count_orders = 0;
+        
+        // Loop through the order data and dynamically add rows
+        result.orderInput.forEach(order => {
+           count_orders +=1;
+        });
+        count_orders +=1;
+        document.getElementById('customerCountDisplay').innerHTML = 'CUSTOMER_ID: ' + count_orders;
+        document.getElementById('customerCount').value =count_orders;
+    }
+</script>
+<script src="getFullOrder.js"></script>
+<script src="customerSubmit.js"></script>
+

@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>Order Table</title>
+    
+</head>
+<body>
+
+    <a href="Emily_Bakes_Cake.html">Place Order</a>
+    <a href="Add_Customer.html">Add Customer</a>
+    <br><br>
+    <button id="getOrderButton" onclick="callGetOrder()">Get Order</button>
+    <br><br>
+
+    <!-- Replace the paragraph with a table -->
+    <table id="orderTable" border="1">
+        <thead>
+            <tr>
+                <th>ORDER_ID</th>
+                <th>EMPLOYEE_ID</th>
+                <th>STATUS</th>
+                <th>DATE</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Rows will be dynamically inserted here -->
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <form id="updateOrderForm">
+        <label for="numberInput">Enter ORDER ID:</label>
+        <input type="number" id="numberInput2" name="number" required>
+        <label for="employeeInput">Enter EMPLOYER ID:</label>
+        <input type="number" id="employeeInput2" name="employee" required>
+        <label for="statusInput">Update Status:</label>
+        <select id="statusInput" name="status" required>
+            <option value="Bakery">Bakery</option>
+            <option value="Decoration">Decoration</option>
+            <option value="Finished">Finished</option>
+            <option value="Awaiting Confirmation">Awaiting Confirmation</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+<script>
+    async function callGetOrder() {
+        const tableBody = document.getElementById('tableBody');
+        // Clear any existing rows
+        tableBody.innerHTML = '';
+
+        var result = await getOrder();
+        console.log(result.orderInput);
+
+        // Loop through the order data and dynamically add rows
+        result.orderInput.forEach(order => {
+            console.log(order);
+            // Create a new row
+            const row = document.createElement('tr');
+
+            // Create cells for each column
+            const orderIdCell = document.createElement('td');
+            orderIdCell.innerText = order.ORDER_ID;
+
+            const employeeIdCell = document.createElement('td');
+            employeeIdCell.innerText = order.EMPLOYEE_ID;
+
+            const statusCell = document.createElement('td');
+            statusCell.innerText = order.STATUS;
+
+            const dateCell = document.createElement('td');
+            dateCell.innerText = order.DATE;
+
+            // Append cells to the row
+            row.appendChild(orderIdCell);
+            row.appendChild(employeeIdCell);
+            row.appendChild(statusCell);
+            row.appendChild(dateCell);
+
+            // Append the row to the table body
+            tableBody.appendChild(row);
+        });
+    }
+</script>
+<script src="getOrder.js"></script>

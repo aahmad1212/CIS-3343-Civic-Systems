@@ -19,11 +19,68 @@
                                         var icingInputColorNone =  document.querySelector('#icingColorInput option[value="None"]');
                                         var writingInput = document.getElementById("writingInput").value;
                                         var writingColorInput = document.getElementById("writingColorInput");
-                                        // Enable or disable the second menu based on the selection of the first menu
+
+
+                                        var decorationOption = document.getElementById("decorationOption").value;
+
+
+                                        var buttercreamFlowers = document.getElementById("buttercreamFlowers");
+                                        var fondantDecoration = document.getElementById("fondantDecoration");
+                                        var silkFlowersIris = document.getElementById("silkFlowersIris");
+                                        var silkFlowersRose = document.getElementById("silkFlowersRose");
+                                        var silkFlowersDaisy = document.getElementById("silkFlowersDaisy");
+                                        var silkFlowersLilly = document.getElementById("silkFlowersLilly");
+                                        var silkButterflies = document.getElementById("silkButterflies");
+                                        var sugarPhotos = document.getElementById("sugarPhotos");
+                                        var toyTrains = document.getElementById("toyTrains");
+                                        var plasticDinosaurs = document.getElementById("plasticDinosaurs");
+                                        var variousDolls = document.getElementById("variousDolls");
+                                        var deer = document.getElementById("deer");
+                                        var rabbits = document.getElementById("rabbits");
+                                        var squirrels = document.getElementById("squirrels");
+                                        var campingTent = document.getElementById("campingTent");
+                                        var campingFire = document.getElementById("campingFire");
+                                        var raceCars = document.getElementById("raceCars");
+                                        var balletSlippers = document.getElementById("balletSlippers");
+                                        var babyBottle = document.getElementById("babyBottle");
+                                        var babyRattle = document.getElementById("babyRattle");
+                                        var fish = document.getElementById("fish");
+                                        var pineTrees = document.getElementById("pineTrees");
+                                        var palmTrees = document.getElementById("palmTrees");
+                                        var fleurPics = document.getElementById("fleurPics");
+                                        var rockCandy = document.getElementById("rockCandy");
+                                        var graduationCap = document.getElementById("graduationCap");
+                                        var balloons = document.getElementById("balloons");
+                                        var redRibbons = document.getElementById("redRibbons");
+                                        var blueRibbons = document.getElementById("blueRibbons");
+                                        var pinkRibbons = document.getElementById("pinkRibbons");
+                                        var purpleRibbons = document.getElementById("purpleRibbons");
+                                        var goldRibbons = document.getElementById("goldRibbons");
+                                        var silverRibbons = document.getElementById("silverRibbons");
+                                        var yellowRibbons = document.getElementById("yellowRibbons");
+                                        var whiteRibbons = document.getElementById("whiteRibbons");
+                                        var greenRibbons = document.getElementById("greenRibbons");
+                                        var blackRibbons = document.getElementById("blackRibbons");
+                                        var starExplosion = document.getElementById("starExplosion");
+                                        var paperParasols = document.getElementById("paperParasols");
+                                        
+                                        var flamingos = document.getElementById("flamingos");
+                                        var fishPic = document.getElementById("fishPic");
+                                        var mermaids = document.getElementById("mermaids");
+                                        var flipFlops = document.getElementById("flipFlops");
+                                        var seashells = document.getElementById("seashells");
+                                        var usFlag = document.getElementById("usFlag");
+                                        var canadaFlag = document.getElementById("canadaFlag");
+                                        var mexicoFlag = document.getElementById("mexicoFlag");
+                                        var goalPosts = document.getElementById("goalPosts");
+                                        var soccerNets = document.getElementById("soccerNets");
+                                        var basketballNets = document.getElementById("basketballNets");
+                                        
                                         if (typeInput === "Sheet") {
                                             roundSize.disabled = true;
                                             sheetSize.disabled = false;
-                                            fillSize.disabled = false; 
+                                            fillSize.disabled = false;
+                                            
                                         }
                                         else if (typeInput ==="Round"){
                                             roundSize.disabled = false;
@@ -56,6 +113,114 @@
                                             icingInputColor.disabled = false;
                                             icingInputColorNone.disabled=true;
                                         }
+                                        if (decorationOption === "Yes"){
+                                                buttercreamFlowers.disabled = false;
+                                                fondantDecoration.disabled = false;
+                                                silkFlowersIris.disabled = false;
+                                                silkFlowersRose.disabled = false;
+                                                silkFlowersDaisy.disabled = false;
+                                                silkFlowersLilly.disabled = false;
+                                                silkButterflies.disabled = false;
+                                                sugarPhotos.disabled = false;
+                                                toyTrains.disabled = false;
+                                                plasticDinosaurs.disabled = false;
+                                                variousDolls.disabled = false;
+                                                deer.disabled = false;
+                                                rabbits.disabled = false;;
+                                                squirrels.disabled = false;
+                                                campingTent.disabled = false;
+                                                campingFire.disabled = false;
+                                                raceCars.disabled = false;
+                                                balletSlippers.disabled = false;
+                                                babyBottle.disabled = false;
+                                                babyRattle.disabled = false;
+                                                fish.disabled = false;
+                                                fleurPics.disabled = false;
+                                                pineTrees.disabled = false;
+                                                palmTrees.disabled = false;
+                                                rockCandy.disabled = false;
+                                                graduationCap.disabled = false;
+                                                balloons.disabled = false;
+                                                redRibbons.disabled = false;
+                                                blueRibbons.disabled = false;
+                                                pinkRibbons.disabled = false;
+                                                purpleRibbons.disabled = false;
+                                                goldRibbons.disabled = false;
+                                                silverRibbons.disabled = false;
+                                                yellowRibbons.disabled = false;
+                                                whiteRibbons.disabled = false;
+                                                greenRibbons.disabled = false;
+                                                blackRibbons.disabled = false;
+                                                starExplosion.disabled = false;
+                                                paperParasols.disabled = false;
+                                                
+                                                flamingos.disabled = false;
+                                                fishPic.disabled = false;
+                                                mermaids.disabled = false;
+                                                flipFlops.disabled = false;
+                                                seashells.disabled = false;
+                                                usFlag.disabled = false;
+                                                canadaFlag.disabled = false;
+                                                mexicoFlag.disabled = false;
+                                                goalPosts.disabled = false;
+                                                soccerNets.disabled = false;
+                                                basketballNets.disabled = false;
+                                                
+                                               
+                                        }
+                                        else {
+                                            buttercreamFlowers.disabled = true;
+                                                fondantDecoration.disabled = true;
+                                                silkFlowersIris.disabled = true;
+                                                silkFlowersRose.disabled = true;
+                                                silkFlowersDaisy.disabled = true;
+                                                silkFlowersLilly.disabled = true;
+                                                silkButterflies.disabled = true;
+                                                sugarPhotos.disabled = true;
+                                                toyTrains.disabled = true;
+                                                plasticDinosaurs.disabled = true;
+                                                variousDolls.disabled = true;
+                                                deer.disabled = true;
+                                                rabbits.disabled = true;
+                                                squirrels.disabled = true;
+                                                campingTent.disabled = true;
+                                                campingFire.disabled = true;
+                                                raceCars.disabled = true;
+                                                balletSlippers.disabled = true;
+                                                babyBottle.disabled = true;
+                                                babyRattle.disabled = true;
+                                                fish.disabled = true;
+                                                fleurPics.disabled = true;
+                                                pineTrees.disabled = true;
+                                                palmTrees.disabled = true;
+                                                rockCandy.disabled = true;
+                                                graduationCap.disabled = true;
+                                                balloons.disabled = true;
+                                                redRibbons.disabled = true;
+                                                blueRibbons.disabled = true;
+                                                pinkRibbons.disabled = true;
+                                                purpleRibbons.disabled = true;
+                                                goldRibbons.disabled = true;
+                                                silverRibbons.disabled = true;
+                                                yellowRibbons.disabled = true;
+                                                whiteRibbons.disabled = true;
+                                                greenRibbons.disabled = true;
+                                                blackRibbons.disabled = true;
+                                                starExplosion.disabled = true;
+                                                paperParasols.disabled = true;
+                                                
+                                                flamingos.disabled = true;
+                                                fishPic.disabled = true;
+                                                mermaids.disabled = true;
+                                                flipFlops.disabled = true;
+                                                seashells.disabled = true;
+                                                usFlag.disabled = true;
+                                                canadaFlag.disabled = true;
+                                                mexicoFlag.disabled =true;
+                                                goalPosts.disabled = true;
+                                                soccerNets.disabled = true;
+                                                basketballNets.disabled = true;
+                                        }
                                        
         }
                                        
@@ -63,11 +228,28 @@
     </script>
 </head>
 <body>
+    <a href="Check_Orders.html">Check Orders</a>
+    <a href="Add_Customer.html">Add Customer</a>
+    <br>
+    <button onclick="callGetOrder(), callGetFullOrder()"> </button>
+    <p id="lastOrder">Last Order:</p>
+    <br>
+    <p id="lastCustomer">Last Customer:</p>
+    <br>
+    <br>
     <form id="myForm">
+        
+        <label for="costomer_ID">Enter CUSTOMER ID:</label>
+        <input type="number" id="customer_ID" name="customer_ID"" required>
+        <br>
+
         <label for="numberInput">Enter ORDER ID:</label>
         <input type="number" id="numberInput" name="number" required>
         <br>
 
+        <label for="employeeInput">Enter EMPLOYER ID:</label>
+        <input type="number" id="employeeInput" name="employee" required>
+        <br>
         <label for="typeInput">Select Type:</label>
         <select id="typeInput" onchange="handleSelection()" name="size" required>
             <option value="Round">Round</option>
@@ -199,16 +381,143 @@
         <br>
 
         <label for="decorationOption">Decorations:</label>
-        <select id="decorationOption" name="decorationOption" required>
+        <select id="decorationOption" onchange="handleSelection()" name="decorationOption" required>
             <option value="No">No</option>
             <option value="Yes">Yes</option>
         </select>
+        <br>
+        <label for="decorationSelection">Choose Decorations</label>
+        <br>
+        ButterCream Flowers <input class="firstClass" type="checkbox" id="buttercreamFlowers" value="buttercreamFlowers" disabled>
+        
+        Fondant Decorations <input class="firstClass" type="checkbox" id="fondantDecoration" value="Fondant Decorations" disabled>
+        <br>
+        Silk Flowers: 
+        Iris <input class="firstClass" type="checkbox" id="silkFlowersIris" value="silkFlowersIris" disabled>
+        Rose <input class="firstClass" type="checkbox" id="silkFlowersRose" value="silkFlowersRose" disabled>
+        Daisy <input class="firstClass" type="checkbox" id="silkFlowersDaisy" value="silkFlowersDaisy" disabled>
+        Lily <input class="firstClass" type="checkbox" id="silkFlowersLilly" value="silkFlowersLilly" disabled>
+        <br>
+        Silk Butterflies <input class="firstClass" type="checkbox" id="silkButterflies" value="silkButterflies" disabled>
+        <br>
+        Edible Sugar-Based "Photos" <input class="firstClass" type="checkbox" id="sugarPhotos" value="sugarPhotos" disabled>
+        <br>
+        Toy Trains <input class="firstClass" type="checkbox" id="toyTrains" value="toyTrains" disabled>
+        
+        Plastic Dinosaurs <input class="firstClass" type="checkbox" id="plasticDinosaurs" value="plasticDinosaurs" disabled>
+        
+        Various Dolls <input class="firstClass" type="checkbox" id="variousDolls" value="variousDolls" disabled>
+        
+        
+        <br>
+        Plastic Deer, Squirrels, Rabbits:
+        Deer <input class="firstClass" type="checkbox" id="deer" value="deer" disabled>
+        Squirrels <input class="firstClass" type="checkbox" id="squirrels" value="squirrels" disabled>
+        Rabbits <input class="firstClass" type="checkbox" id="rabbits" value="rabbits" disabled>
+        <br>
+        Camping Tent, Camping Fire:
+        Camping Tent <input class="firstClass" type="checkbox" id="campingTent" value="campingTent" disabled>
+        Camping Fire <input class="firstClass" type="checkbox" id="campingFire" value="campingFire" disabled>
+        <br>
+        
+        Race Cars <input class="firstClass" type="checkbox" id="raceCars" value="raceCars" disabled>
+        
+        Plastic Ballet Slippers <input class="firstClass" type="checkbox" id="balletSlippers" value="balletSlippers" disabled>
+        <br>
+        Plastic Baby Rattle <input class="firstClass" type="checkbox" id="babyRattle" value="babyRattle" disabled>
+        
+        Plastic Baby Bottle <input class="firstClass" type="checkbox" id="babyBottle" value="Baby Bottle" disabled>
+        <br>
+        Plastic Fish <input class="firstClass" type="checkbox" id="fish" value="fish" disabled>
+        <br>
+        Plastic Pine Trees <input class="firstClass" type="checkbox" id="pineTrees"value="pineTrees" disabled>
+        
+        Plastic Palm Trees <input class="firstClass" type="checkbox" id="palmTrees" value="palmTrees" disabled>
+        <br>
+        Fleur-de-Lis pics <input class="firstClass" type="checkbox" id="fleurPics" value="fleurPics" disabled>
+        <br>
+        Rock Candy <input class="firstClass" type="checkbox" id="rockCandy" value="rockCandy" disabled>
+        <br>
+        Plastic Graduation Cap <input class="firstClass" type="checkbox" id="graduationCap" value="graduationCap" disabled>
+        
+        Plastic Balloons <input class="firstClass" type="checkbox" id="balloons" value="balloons" disabled>
 
+       
+        <br>
+        Ribbons: 
+        Red <input class="firstClass" type="checkbox" id="redRibbons" value="redRibbons" disabled>
+        Blue <input class="firstClass" type="checkbox" id="blueRibbons" value="blueRibbons" disabled>
+        Pink <input class="firstClass" type="checkbox" id="pinkRibbons" value="pinkRibbons" disabled>
+        Purple <input class="firstClass" type="checkbox" id="purpleRibbons" value="purpleRibbons" disabled>
+        Gold <input class="firstClass" type="checkbox" id="goldRibbons" value="goldRibbons" disabled>
+        Silver <input class="firstClass" type="checkbox" id="silverRibbons" value="silverRibbons" disabled>
+        Yellow <input class="firstClass" type="checkbox" id="yellowRibbons" value="yellowRibbons" disabled>
+        White <input class="firstClass" type="checkbox" id="whiteRibbons" value="whiteRibbons" disabled>
+        Green <input class="firstClass" type="checkbox" id="greenRibbons" value="greenRibbons" disabled>
+        Black <input class="firstClass" type="checkbox" id="blackRibbons" value="blackRibbons" disabled>
+        <br>
+        Plastic Star Explosion Insert <input class="firstClass" type="checkbox" id="starExplosion" value="starExplosion" disabled>
+        <br>
+        Paper Parasols <input class="firstClass" type="checkbox" id="paperParasols" value="paperParasols" disabled>
+        <br>
+     
+        Plastic Pics:
+        
+        Flamingos <input class="firstClass" type="checkbox" id="flamingos" value="flamingos" disabled>
+        Fish <input class="firstClass" type="checkbox" id="fishPic" value="fishPic">
+        Mermaids <input class="firstClass" type="checkbox" id="mermaids" value="mermaids" disabled>
+        Flip Flops <input class="firstClass" type="checkbox" id="flipFlops" value="flipFlops" disabled>
+        Seashells <input class="firstClass" type="checkbox" id="seashells" value="seashells" disabled>
+        <br>
+        Flags:
+
+        U.S. <input class="firstClass" type="checkbox" id="usFlag" value="usFlag" disabled>
+        Canada <input class="firstClass" type="checkbox" id="canadaFlag" value="canadaFlag" disabled>
+        Mexico <input class="firstClass" type="checkbox" id="mexicoFlag" value="mexicoFlag" disabled>
+        <br>
+        Plastic Sports Equipment:
+       
+        Goal Posts <input class="firstClass" type="checkbox" id="goalPosts" value="goalPosts" disabled>
+        Soccer Nets <input class="firstClass" type="checkbox" id="soccerNets" value="soccerNets" disabled>
+        Basketball Nets <input class="firstClass" type="checkbox" id="basketballNets" value="basketballNets" disabled>
+        
         <br>
         <button type="submit">Submit</button>
     </form>
 
    
+    <script>
+        async function callGetOrder() {
+            
+            
+            var result = await getOrder();
+            
+            var count_orders = 0;
+            
+            // Loop through the order data and dynamically add rows
+            result.orderInput.forEach(order => {
+               count_orders +=1;
+            });
+            document.getElementById('lastOrder').innerHTML = 'Last Order: ' + count_orders;
+            
+        }
+        async function callGetFullOrder() {
+        
+        
+        var result = await getFullOrder();
+        console.log(' GETFULLORDER ' ,result.orderInput);
+        var count_orders = 0;
+        
+        // Loop through the order data and dynamically add rows
+        result.orderInput.forEach(order => {
+           count_orders +=1;
+        });
+        document.getElementById('lastCustomer').innerHTML = 'Last Customer: ' + count_orders;
+        
+    }
+    </script>
+    <script src="getFullOrder.js"></script>
+    <script src="getOrder.js"></script>
 
     <script src="submit.js"></script>
 </body>
